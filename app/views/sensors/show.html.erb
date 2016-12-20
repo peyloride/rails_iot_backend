@@ -10,6 +10,10 @@
   <dd><%= @sensor.node_type %></dd>
   <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
   <dd><%= @sensor.address %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:temperature) %>:</strong></dt>
+  <dd><%= @temp %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:light) %>:</strong></dt>
+  <dd><%= @light %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
