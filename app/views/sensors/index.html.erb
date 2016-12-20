@@ -17,8 +17,8 @@
     <% @sensors.each do |sensor| %>
       <tr>
         <td><%= link_to sensor.id, sensor_path(sensor) %></td>
-        <td><%= sensor.name %></td>
-        <td><%= sensor.type %></td>
+        <td><%= link_to sensor.name, sensor_path(sensor) %></td>
+        <td><%= sensor.node_type %></td>
         <td><%= sensor.address %></td>
         <td><%=l sensor.created_at %></td>
         <td>
