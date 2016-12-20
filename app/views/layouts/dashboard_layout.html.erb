@@ -7,17 +7,30 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/datepicker3.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/lumino.glyphs.js"></script>
   </head>
 
   <body>
 
-    <%= render "layouts/top_nav" if current_user %>
+    <%= render "dashboard/layouts/top_nav" %>
 
-    <%= render "layouts/sidebar" if current_user %>
+    <%= render "dashboard/layouts/sidebar" %>
 
     <%= yield %>
 
 
+
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/chart-data.js"></script>
+    <script src="js/easypiechart.js"></script>
+    <script src="js/easypiechart-data.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
     <script>
       !function ($) {
         $(document).on("click","ul.nav li.parent > a > span.icon", function(){

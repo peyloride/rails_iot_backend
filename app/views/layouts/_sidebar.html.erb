@@ -1,0 +1,16 @@
+  <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+    <form role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+    </form>
+    <ul class="nav menu">
+      <li class=<%= 'active' if current_page?(root_path) %>><%= link_to '<svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Dashboard'.html_safe, root_path %></li>
+      <li class=<%= 'active' if current_page?(new_sensor_path) %>><%= link_to '<svg class="glyph stroked wireless router"><use xlink:href="#stroked-wireless-router"/></svg> Add New Sensor'.html_safe, new_sensor_path %></li>
+      <li class=<%= 'active' if current_page?(edit_registration_path(current_user)) %>><%= link_to '<svg class="glyph stroked male user "><use xlink:href="#stroked-male-user"/></svg> My Profile'.html_safe, edit_registration_path(current_user) %></li>
+      <li><%= link_to '<svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Logout'.html_safe, destroy_user_session_path, method: :delete%>
+
+    </ul>
+
+  </div><!--/.sidebar-->
+
