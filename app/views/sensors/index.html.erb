@@ -69,24 +69,17 @@
         <div class="panel panel-orange panel-widget">
           <div class="row no-padding">
             <div class="col-sm-3 col-lg-5 widget-left">
-              <svg class="glyph stroked empty-message"><use xlink:href="#stroked-empty-message"></use></svg>
+              <svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg>
             </div>
             <div class="col-sm-9 col-lg-7 widget-right">
-              <div class="large">52</div>
-              <div class="text-muted">Sonra yapcam bunu</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div><!--/.row-->
-
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="panel panel-default">
-          <div class="panel-heading">Sensor Values Overview</div>
-          <div class="panel-body">
-            <div class="canvas-wrapper">
-              <canvas class="main-chart" id="line-chart" height="200" width="600"></canvas>
+              <div class="large">
+              <% count = 0 %>
+              <% current_user.sensors.each do |sensor| %>
+                <% count = sensor.values.count + count %>
+              <% end %>
+              <%= count%>
+              </div>
+              <div class="text-muted">Values collected from your sensors</div>
             </div>
           </div>
         </div>

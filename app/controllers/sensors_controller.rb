@@ -12,6 +12,7 @@ class SensorsController < ApplicationController
   def show
     @temp = CoAP::Client.new.get_by_uri("coap://#{@sensor.address}/sensors/temperature").payload
     @light = CoAP::Client.new.get_by_uri("coap://#{@sensor.address}/sensors/ambient_light").payload
+    @time = Time.now
   end
 
   # GET /sensors/new
