@@ -68,14 +68,14 @@
           <% light_avg = 0 %>
           <% time_range = (@time - i.hour)..(@time - (i-1).hour) %>
             <% current_user.sensors.find(@sensor.id).values.where(created_at: time_range).each do |value| %>
-              <% light_avg += value.light.to_i %>
+              <% light_avg += value.light.to_f %>
             <% end %>
 
             <% count = current_user.sensors.find(@sensor.id).values.where(created_at: time_range).count %>
 
             <% count = 1 if (count == 0) %>
 
-            <% light_avg = light_avg/count %>
+            <% light_avg = (light_avg/count).round(2) %>
             <%= light_avg %>,
           <% end %>
 
@@ -94,14 +94,14 @@
           <% temp_avg = 0 %>
           <% time_range = (@time - i.hour)..(@time - (i-1).hour) %>
             <% current_user.sensors.find(@sensor.id).values.where(created_at: time_range).each do |value| %>
-              <% temp_avg += value.temperature.to_i %>
+              <% temp_avg += value.temperature.to_f %>
             <% end %>
 
             <% count = current_user.sensors.find(@sensor.id).values.where(created_at: time_range).count %>
 
             <% count = 1 if (count == 0) %>
 
-            <%= temp_avg = temp_avg/count %>,
+            <%= temp_avg = (temp_avg/count).round(2) %>,
           <% end %>
 
           ]
