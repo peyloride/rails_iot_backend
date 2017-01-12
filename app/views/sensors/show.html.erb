@@ -14,20 +14,22 @@
         <div class="panel panel-default">
           <div class="panel-heading"><%= @sensor.name %>  Details</div>
             <dl class="dl-horizontal">
-            <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
-            <dd><%= @sensor.name %></dd>
-            <dt><strong><%= model_class.human_attribute_name(:type) %>:</strong></dt>
-            <dd><%= @sensor.node_type %></dd>
-            <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
-            <dd><%= @sensor.address %></dd>
-            <dt><strong><%= model_class.human_attribute_name(:temperature) %>:</strong></dt>
-            <dd><%= @temp %></dd>
-            <dt><strong><%= model_class.human_attribute_name(:light) %>:</strong></dt>
-            <dd><%= @light %></dd>
-          </dl>
+              <br>
+              <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+              <dd><%= @sensor.name %></dd>
+              <dt><strong><%= model_class.human_attribute_name(:type) %>:</strong></dt>
+              <dd><%= @sensor.node_type %></dd>
+              <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
+              <dd><%= @sensor.address %></dd>
+              <dt><strong><%= model_class.human_attribute_name(:temperature) %>:</strong></dt>
+              <dd><%= @temp %></dd>
+              <dt><strong><%= model_class.human_attribute_name(:light) %>:</strong></dt>
+              <dd><%= @light %></dd>
+              <br>
+            </dl>
+          </div>
         </div>
-      </div>
-    </div><!--/.row-->
+      </div><!--/.row-->
 
 
     <div class="row">
@@ -42,8 +44,6 @@
         </div>
       </div>
     </div><!--/.row-->
-    <%= @time %>
-
   </div>  <!--/.main-->
 
 
@@ -58,9 +58,9 @@
       datasets : [
         {
           label: "My First dataset",
-          fillColor : "rgba(220,220,220,0.2)",
+          fillColor : "rgba(252, 184, 115, 1)",
           strokeColor : "rgba(220,220,220,1)",
-          pointColor : "rgba(220,220,220,1)",
+          pointColor : "rgba(250, 133, 15, 1)",
           pointStrokeColor : "#fff",
           pointHighlightFill : "#fff",
           pointHighlightStroke : "rgba(220,220,220,1)",

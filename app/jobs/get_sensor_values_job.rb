@@ -1,7 +1,7 @@
 class GetSensorValuesJob < ApplicationJob
   queue_as :default
   after_perform do |job|
-    sleep 300
+    sleep 10
     GetSensorValuesJob.perform_later('hebebebe')
   end
 
